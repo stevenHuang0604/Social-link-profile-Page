@@ -29,9 +29,26 @@ body {
   gap: 3rem;
 }
 
+@media screen and (max-width: 450px) {
+  .profile {
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    padding: 2.5rem;
+
+    gap: 5rem;
+  }
+}
+
 .profile__image {
   border-radius: 50%;
   width: 40%;
+}
+
+@media screen and (max-width: 450px) {
+  .profile__image {
+    width: 50%;
+  }
 }
 
 .profile__preview {
@@ -43,6 +60,12 @@ body {
   font-weight: 400;
 }
 
+@media screen and (max-width: 450px) {
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+}
+
 .profile__location {
   font-size: 1.6rem;
   font-weight: 600;
@@ -50,9 +73,21 @@ body {
   margin-top: 1rem;
 }
 
+@media screen and (max-width: 450px) {
+  .profile__location {
+    font-size: 2.2rem;
+  }
+}
+
 .profile__job {
   font-size: 1.6rem;
   font-weight: 400;
+}
+
+@media screen and (max-width: 450px) {
+  .profile__job {
+    font-size: 2rem;
+  }
 }
 
 .card__links {
@@ -63,17 +98,43 @@ body {
   gap: 2rem;
 }
 
+@media screen and (max-width: 450px) {
+  .card__links {
+    gap: 3rem;
+  }
+}
+
 .card__item {
   background-color: hsl(0, 0%, 20%);
   text-align: center;
   padding: 1.4rem;
   border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+@media screen and (max-width: 450px) {
+  .card__item {
+    padding: 2rem;
+  }
+}
+
+.card__item:hover {
+  filter: brightness(1.1);
 }
 
 .card__link:link,
 .card__link:visited {
+  display: inline-block;
   font-size: 1.6rem;
   font-weight: 600;
   color: hsl(0, 0%, 100%);
   text-decoration: none;
+}
+
+@media screen and (max-width: 450px) {
+  .card__link:link,
+  .card__link:visited {
+    font-size: 2rem;
+  }
 }
